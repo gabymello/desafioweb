@@ -1,0 +1,148 @@
+:root {
+    --primary-color: #00d1b2;  /* tom turquesa */
+    --primary-hover: #00b89c;
+    --danger-color: #ff3860;
+    --danger-hover: #e0274f;
+    --bg-dark: #1e1e1e;
+    --text-light: #f5f5f5;
+    --product-bg: #2c2c2c;
+    --product-hover: #3a3a3a;
+    --input-bg: #2e2e2e;
+    --input-border: #555;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url('https://images.unsplash.com/photo-1606787366850-de6330128bfc?auto=format&fit=crop&w=1470&q=80') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+    color: var(--text-light);
+}
+
+.container {
+    background-color: var(--bg-dark);
+    padding: 30px;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-2px);
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: var(--primary-color);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    width: 100%;
+}
+
+input[type="text"],
+input[type="number"] {
+    padding: 12px;
+    border: 1px solid var(--input-border);
+    background-color: var(--input-bg);
+    border-radius: 10px;
+    font-size: 16px;
+    width: 100%;
+    color: var(--text-light);
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px rgba(0, 209, 178, 0.5);
+    outline: none;
+}
+
+button {
+    padding: 12px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    width: 100%;
+}
+
+button:hover {
+    background-color: var(--primary-hover);
+    transform: scale(1.02);
+}
+
+button:focus {
+    outline: 2px solid var(--primary-hover);
+    outline-offset: 2px;
+}
+
+.limpar-btn {
+    background-color: var(--danger-color);
+    margin-top: 15px;
+}
+
+.limpar-btn:hover {
+    background-color: var(--danger-hover);
+}
+
+ul {
+    list-style: none;
+    margin-top: 20px;
+    text-align: left;
+    width: 100%;
+}
+
+li {
+    padding: 12px 18px;
+    background-color: var(--product-bg);
+    margin-bottom: 10px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    border-left: 4px solid var(--primary-color);
+    color: var(--text-light);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+li:hover {
+    background-color: var(--product-hover);
+    transform: translateX(5px);
+}
+
+.riscado {
+    text-decoration: line-through;
+    color: #999;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+
+    input,
+    button {
+        font-size: 14px;
+    }
+}
